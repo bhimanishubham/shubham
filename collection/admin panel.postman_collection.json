@@ -1,0 +1,319 @@
+{
+	"info": {
+		"_postman_id": "a6f84e36-5c67-4c69-badf-bf7e45046a8a",
+		"name": "admin panel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20413551"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "admin@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/admin/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "641541e2fcf22cc42e4e93f3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/admin/delete_admin",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"delete_admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "new admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "test1",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test1@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "role_type",
+									"value": "0",
+									"description": "0 for admin and 1 subadmin",
+									"type": "text"
+								},
+								{
+									"key": "url_array",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/admin/add_admin",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"add_admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "640a0bcee77005b0c6d3a1ae",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "admin@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/admin/update_admin",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"update_admin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "course",
+			"item": [
+				{
+					"name": "add course",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "testing data",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/jaydev/Downloads/wallpaperflare.com_wallpaper.jpg"
+								},
+								{
+									"key": "student_no",
+									"value": "15",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/admin/add_course",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"add_course"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update course",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "64155638c778c4e66e21dc85",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "hello",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/jaydev/Downloads/pexels-drift-shutterbug-2085998.jpg"
+								},
+								{
+									"key": "description",
+									"value": "ook",
+									"type": "text"
+								},
+								{
+									"key": "student_no",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/admin/update_course",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"update_course"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete course",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "64155612c778c4e66e21dc81",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/admin/update_course",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"update_course"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "course list",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/admin/course_list",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"course_list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

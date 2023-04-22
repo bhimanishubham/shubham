@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "a181a61c-706f-4941-96ea-492f669c55a7",
+		"name": "user",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20413551"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "ok",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "ok@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "passoword",
+							"value": "1234567",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "456456456",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/user/user_register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"user_register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "jd@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/user/user_login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"user_login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "6415874fd091f088e0e4cc5e",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "js@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "5656565",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234567",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/home/jaydev/Downloads/pexels-drift-shutterbug-2085998.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/user/update_user",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"update_user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "6415874fd091f088e0e4cc5e",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/user/delete_user",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"delete_user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check referred",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "referral_code",
+							"value": "EQvRX",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "64158726722e00a58819dd06",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/user/check_referred",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"check_referred"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
